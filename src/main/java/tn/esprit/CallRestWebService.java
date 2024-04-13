@@ -27,6 +27,8 @@ public class CallRestWebService {
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet(endpoint);
 		String ip = "not found";
+		
+		
 		try {
 			HttpResponse response = client.execute(request);
 			String jsonResponse = EntityUtils.toString(response.getEntity());
